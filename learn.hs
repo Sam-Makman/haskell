@@ -1,3 +1,5 @@
+
+
 sum' :: (Num a) => [a] -> a
 sum' [] = error "Cannot sum empty list" 
 sum' [x] = x
@@ -29,6 +31,11 @@ merge [x] (y:ys)
 merge (x:xs) [y]
 	| x > y = y : x : xs
 	| otherwise = x : y : xs
-merge (x:xs) (y:ys) 
+merge (x:xs) (y:ys)  
 	| x > y = y : merge (x:xs) ys
-	| otherwise = x : merge xs (y:ys) 
+	| otherwise = x : merge xs (y:ys)
+
+
+circle r = pi * r * r
+
+
